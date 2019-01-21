@@ -11,12 +11,12 @@ ui = function(request) {
       collapsible=T,
       footer = column(12, align="center", "CKD-App 2019"),
       source("sub/01_ui_welcome.R")$value,
-      source("sub/ui_experiments.R")$value,
-      source("sub/02_ui_deg.R")$value,
-      source("sub/03_ui_progeny.R")$value,
-      source("sub/04_ui_dorothea.R")$value,
-      source("sub/05_ui_piano.R")$value,
-      source("sub/06_ui_dvd.R")$value,
+      source("sub/02_ui_experiments.R")$value,
+      source("sub/03_ui_deg.R")$value,
+      source("sub/04_ui_progeny.R")$value,
+      #source("sub/05_ui_piano.R")$value,
+      source("sub/06_ui_dorothea.R")$value,
+      source("sub/07_ui_dvd.R")$value,
       hr()
       ) # close navbarPage
     ) # close fluidPage
