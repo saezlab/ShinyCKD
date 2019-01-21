@@ -11,9 +11,9 @@ This app is ...
 
 ---
 
-<i class="fab fa-github"></i> Source code is available on <a href="https://www.w3schools.com" target="_blank">GitHub</a>.
+<i class="fab fa-github"></i> Source code is available on <a href="https://github.com/saezlab/ShinyCKD" target="_blank">GitHub</a>.
 
-<i class="fas fa-question"></i> Please use the <a href="http://saezlab.org" target="_blank">GitHub's issue system</a> to address questions, bugs or feedback. 
+<i class="fas fa-question"></i> Please use the <a href="https://github.com/saezlab/ShinyCKD/issues" target="_blank">GitHub's issue system</a> to address questions, bugs or feedback. 
 
 ---
 
