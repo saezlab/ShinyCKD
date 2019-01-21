@@ -1,4 +1,5 @@
 .Rproj.user
+
 .Rhistory
 .RData
 .Ruserdata
@@ -11,6 +12,7 @@ data/limma
 data/piano
 data/progeny
 models/dorothea_regulon_old_version.rdata
+misc/exp_meta.RData
 
 # source files
 src/tidy_data.R
