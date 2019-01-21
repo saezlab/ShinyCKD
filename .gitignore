@@ -15,8 +15,8 @@ models/dorothea_regulon_old_version.rdata
 misc/exp_meta.RData
 
 # source files
-src/tidy_data.R
-src/debugging.R
+sub/tidy_data.R
+sub/debugging.R
 
 *.html
 *.Rproj
