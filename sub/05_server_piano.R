@@ -1,11 +1,3 @@
-selected_disease_progeny = eventReactive(input$select_disease_progeny, {
-  input$select_disease_progeny
-}) 
-
-selected_pathway = eventReactive(input$select_pathway, {
-  input$select_pathway
-}) 
-
 selected_common_diseases = eventReactive(input$select_common_diseases, {
   input$select_common_diseases
 })
