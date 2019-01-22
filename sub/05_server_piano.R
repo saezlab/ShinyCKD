@@ -6,40 +6,48 @@ selected_pathway = eventReactive(input$select_pathway, {
   input$select_pathway
 }) 
 
+selected_common_diseases = eventReactive(input$select_common_diseases, {
+  input$select_common_diseases
+})
 
-output$progeny_heatmap = renderPlot({
-  sig_matrix = progeny_result %>%
-    select(disease, pathway, adj.p.val) %>%
-    mutate(adj.p.val = stars.pval(adj.p.val)) %>%
-    spread(disease, adj.p.val) %>%
-    data.frame(row.names=1)
+adjusted_fdr_piano = eventReactive(input$adjust_fdr_piano, {
+  input$adjust_fdr_piano
+})
+
+
+
+output$piano_tile = renderPlot({
+  piano_result %>%
+    filter(pVal > -log10(adjusted_fdr_piano())) %>%
+    group_by(Pathway) %>%
+    add_count() %>%
+    ungroup() %>%
+    filter(n>selected_common_diseases()) %>%
+    arrange(-n) %>%
+    mutate(Pathway = str_trunc(Pathway, 25)) %>%
+    ggplot(aes(x=Disease, y=Pathway, fill=Disease)) +
+    geom_tile() +
+    scale_fill_manual(values = c("#EC853F", "#589A45", "#CCF3FF", "#624592", "#000000", "#B2B6BA", "#4279AD", "#FFFCAD", "#A45d3A"), drop=F) +
+    labs(fill = "CKD entity") +
+    theme(axis.title = element_blank())
+})
+
+output$piano_df = DT::renderDataTable({
+  piano_result %>% 
+    filter(pVal > -log10(adjusted_fdr_piano())) %>%
+    rename(FDR = pVal) %>%
+    mutate(FDR = 10**-FDR) %>%
+    mutate(Pathway = as_factor(Pathway)) %>%
+    DT::datatable(escape = F, option = list(scrollX = TRUE, autoWidth=T), 
+                  filter = "top", selection = list(target = "none"))
   
-  progeny_result %>%
-    select(disease, pathway, activity) %>%
-    spread(disease, activity) %>%
-    data.frame(row.names=1, check.names = F) %>%
-    pheatmap(scale = "row", display_numbers = sig_matrix)
 })
 
-output$progeny_scatter = renderPlotly({
-  if (!is.null(selected_disease_progeny()) & !is.null(selected_pathway())) {
-    progeny_scatter = limma_result %>%
-      filter(disease == selected_disease_progeny()) %>%
-      inner_join(progeny_matrix, by="gene") %>%
-      filter(pathway == selected_pathway()) %>%
-      mutate(contribution = case_when(sign(logFC) * sign(weight) == 1 ~ "positive",
-                                      TRUE ~ "negative")) %>%
-      ggplot(aes(x=logFC, y=weight, color=contribution, label=gene)) +
-      geom_point() +
-      geom_hline(yintercept = c(0), linetype=c(1) ,color=c("black")) +
-      geom_vline(xintercept = c(0), linetype=c(1) , color=c("black")) +
-      theme_minimal() +
-      #theme(aspect.ratio = c(1)) +
-      scale_color_manual(values = rwth_color(c("magenta", "green")),
-                         drop=F) +
-      labs(x="Effect size", y="PROGENy weight")
-    ggplotly(progeny_scatter, tooltip = c("label")) %>% 
-      config(displayModeBar = F) %>%
-      layout(xaxis=list(fixedrange=T)) %>% layout(yaxis=list(fixedrange=T))
-  }
-})
+output$download_piano = downloadHandler(
+  filename = function() {
+    "piano_results.csv"
+  },
+  content = function(file) {
+    piano_result %>%
+      write_delim(., file)
+  })
