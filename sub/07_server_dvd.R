@@ -20,7 +20,7 @@ output$dvd_heatmap = renderPlot({
     theme(axis.text.x = element_text(angle = 90, hjust = 1),
           axis.title = element_blank()) +
     scale_fill_manual(values = c("#EC853F", "#589A45", "#CCF3FF", "#624592", "#000000", "#B2B6BA", "#4279AD", "#FFFCAD", "#A45d3A"), drop=F) +
-    labs(fill = "CDK entity")
+    labs(fill = "CKD entity")
 })
 
 output$dvd_df = DT::renderDataTable({
