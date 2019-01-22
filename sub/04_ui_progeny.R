@@ -3,7 +3,7 @@ tabPanel(
   icon = icon("line-chart"),
   sidebarPanel(
     h4("Pathway activity inference with PROGENy"),
-    p(a("PROGENy", href = "https://saezlab.github.io/progeny/", targer="_blank"), "infers pathway activity from gene expression data for 11 signaling pathway"),
+    p(a("PROGENy", href = "https://saezlab.github.io/progeny/", targer="_blank"), "infers pathway activity from gene expression exploting footprint signatures for 11 signaling pathways."),
     pickerInput(inputId = "select_disease_progeny", label = "Select disease entity",
                 choices = sort(unique(limma_result$disease)), 
                 options = list(`actions-box` = TRUE)), 
