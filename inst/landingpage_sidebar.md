@@ -18,7 +18,7 @@ This app is ...
 ---
 
 <center>
-<a href="https://www.w3schools.com" target="_blank"><img src="../www/logo_saezlab.png" width="20%", align="center"></a>
+<a href="http://saezlab.org" target="_blank"><img src="../www/logo_saezlab.png" width="20%", align="center"></a>
 
 <i class="fab fa-twitter"></i> <a href="https://twitter.com/sysbiomed?lang=de" target="_blank">@sysbiomed</a>
 </center>
