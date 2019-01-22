@@ -13,6 +13,7 @@ data/piano
 data/progeny
 models/dorothea_regulon_old_version.rdata
 misc/exp_meta.RData
+rsconnect/
 
 # source files
 sub/tidy_data.R
