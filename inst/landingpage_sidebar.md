@@ -3,7 +3,7 @@
 #### Welcome to the CKD-Application
 This app is ...
 
-<i class="far fa-comment"></i> designed to interactively explore the results of <a href="https://www.w3schools.com" target="_blank">*A functional landscape of chronic kidney disease entities from public transcriptomic data*</a>.
+<i class="far fa-comment"></i> designed to interactively explore the results of <a href="https://www.biorxiv.org/content/early/2018/02/14/265447" target="_blank">*A functional landscape of chronic kidney disease entities from public transcriptomic data*</a>.
 
 <i class="fas fa-user-cog"></i> developed and maintained by Christian Holland (<a href="mailto:christian.holland@bioquant.uni-heidelberg.de" target="_blank"><i class="glyphicon glyphicon-envelope"></i></a>) at the <a href="http://saezlab.org" target="_blank">Saezlab</a>, Institute for Computational Biomedicine, University of Heidelberg.
 
