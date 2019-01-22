@@ -3,7 +3,7 @@ tabPanel(
   icon = icon("bar-chart-o"),
   sidebarPanel(
     h4("Transcription factor activity inference using DoRothEA"),
-    p(a("DoRothEA", href = "https://saezlab.github.io/DoRothEA/", targer="_blank"), "is a gene regulatory network allowing the estimation of TF activies from gene expression data."),
+    p(a("DoRothEA", href = "https://saezlab.github.io/DoRothEA/", targer="_blank"), "is a resource of transcriptional regulation mapping transcription factors to their targets. This information allows the estimation of TF activies from gene expression data."),
     pickerInput(inputId = "select_disease_dorothea", 
                 label = "Select disease entity",
                 choices = sort(unique(limma_result$disease)), 
