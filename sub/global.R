@@ -12,6 +12,7 @@ limma_result = readRDS("data/limma_result.rds")
 progeny_result = readRDS("data/progeny_result.rds")
 dorothea_result = readRDS("data/dorothea_result.rds")
 drug_result = readRDS("data/drug_result.rds")
+piano_result = readRDS("data/piano_result.rds")
 
 progeny_matrix = get(load("data/models/progeny_matrix_human_v1.rda")) %>%
   filter(!(pathway %in% c("Androgen", "Estrogen", "WNT")))
