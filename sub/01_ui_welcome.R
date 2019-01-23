@@ -8,5 +8,4 @@ tabPanel(
   mainPanel(
     includeMarkdown("inst/landingpage.md")
   )
-  
 )
