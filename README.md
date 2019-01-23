@@ -1,6 +1,8 @@
 #### Welcome to the CKD-Application
 This app is ...
 
+* deployed on <a href="https://saezlab.shinyapps.io/ckd_landscape" target="_blank">https://saezlab.shinyapps.io/ckd_landscape</a>
+
 * designed to interactively explore the results of <a href="https://www.biorxiv.org/content/early/2018/02/14/265447" target="_blank">*A functional landscape of chronic kidney disease entities from public transcriptomic data*</a>.
 
 * developed and maintained by Christian Holland at the <a href="http://saezlab.org" target="_blank">Saezlab</a>, Institute for Computational Biomedicine, University of Heidelberg.
