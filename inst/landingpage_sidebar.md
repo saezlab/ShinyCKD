@@ -7,7 +7,7 @@ This app is ...
 
 <i class="fas fa-user-cog"></i> developed and maintained by Christian Holland (<a href="mailto:christian.holland@bioquant.uni-heidelberg.de" target="_blank"><i class="glyphicon glyphicon-envelope"></i></a>) at the <a href="http://saezlab.org" target="_blank">Saezlab</a>, Institute for Computational Biomedicine, University of Heidelberg.
 
-<i class="fas fa-laptop-code"></i> developed using <a href="https://shiny.rstudio.com/Shiny" target="_blank">Shiny</a>.
+<i class="fas fa-laptop-code"></i> developed using <a href="https://shiny.rstudio.com" target="_blank">Shiny</a>.
 
 ---
 
