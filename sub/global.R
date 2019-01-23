@@ -6,6 +6,7 @@ library(plotly)
 library(gtools)
 library(pheatmap)
 library(DT)
+library(shinyjs)
 
 # load data
 limma_result = readRDS("data/limma_result.rds")
