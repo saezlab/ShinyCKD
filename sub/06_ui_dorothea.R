@@ -1,5 +1,5 @@
 tabPanel(
-  title = "TF-activity",
+  title = "TF activity",
   icon = icon("bar-chart-o"),
   sidebarPanel(
     h4("Transcription factor activity inference using DoRothEA"),
