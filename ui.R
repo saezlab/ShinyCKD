@@ -8,7 +8,7 @@ ui = function(request) {
       id = "menu", 
       title = div(img(src="logo_saezlab.png", width="25", height="25"),
                   "CKD-App"),
-      windowTitle = "CDK-App",
+      windowTitle = "CKD-App",
       collapsible=T,
       source("sub/01_ui_welcome.R")$value,
       source("sub/02_ui_experiments.R")$value,
